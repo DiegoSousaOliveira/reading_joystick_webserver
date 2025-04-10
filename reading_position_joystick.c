@@ -49,21 +49,21 @@ void read_joystick() {
     if (joystick.x > 2000 && joystick.x < 2100 && joystick.y > 2000 && joystick.y < 2100) {
         joystick.direction = "Centro";
     } else if (angle >= 337.5 || angle < 22.5) {
-        joystick.direction = "Norte"; // ✅
+        joystick.direction = "Norte";
     } else if (angle >= 22.5 && angle < 67.5) {
         joystick.direction = "Nordeste";
     } else if (angle >= 67.5 && angle < 112.5) {
-        joystick.direction = "Leste"; // ✅
+        joystick.direction = "Leste";
     } else if (angle >= 112.5 && angle < 157.5) {
         joystick.direction = "Sudeste";
     } else if (angle >= 157.5 && angle < 202.5) {
-        joystick.direction = "Sul"; // ✅
+        joystick.direction = "Sul";
     } else if (angle >= 202.5 && angle < 247.5) {
-        joystick.direction = "Sudoeste"; // ✅
+        joystick.direction = "Sudoeste";
     } else if (angle >= 247.5 && angle < 292.5) {
-        joystick.direction = "Oeste"; // ✅
+        joystick.direction = "Oeste";
     } else if (angle >= 292.5 && angle < 337.5) {
-        joystick.direction = "Noroeste"; // ✅
+        joystick.direction = "Noroeste";
     } else {
         joystick.direction = "Indefinido";
     }
