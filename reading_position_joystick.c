@@ -9,8 +9,8 @@
 #include "lwip/netif.h"
 #include <math.h>
 
-#define WIFI_SSID "EDNA"
-#define WIFI_PASSWORD "wwork197"
+#define WIFI_SSID "Labirang"
+#define WIFI_PASSWORD "1fp1*007"
 
 #define JOYSTICK_X_PIN 26
 #define JOYSTICK_Y_PIN 27
@@ -49,21 +49,21 @@ void read_joystick() {
     if (joystick.x > 2000 && joystick.x < 2100 && joystick.y > 2000 && joystick.y < 2100) {
         joystick.direction = "Centro";
     } else if (angle >= 337.5 || angle < 22.5) {
-        joystick.direction = "Leste";
+        joystick.direction = "Norte"; // ✅
     } else if (angle >= 22.5 && angle < 67.5) {
         joystick.direction = "Nordeste";
     } else if (angle >= 67.5 && angle < 112.5) {
-        joystick.direction = "Norte";
+        joystick.direction = "Leste"; // ✅
     } else if (angle >= 112.5 && angle < 157.5) {
-        joystick.direction = "Noroeste";
-    } else if (angle >= 157.5 && angle < 202.5) {
-        joystick.direction = "Oeste";
-    } else if (angle >= 202.5 && angle < 247.5) {
-        joystick.direction = "Sudoeste";
-    } else if (angle >= 247.5 && angle < 292.5) {
-        joystick.direction = "Sul";
-    } else if (angle >= 292.5 && angle < 337.5) {
         joystick.direction = "Sudeste";
+    } else if (angle >= 157.5 && angle < 202.5) {
+        joystick.direction = "Sul"; // ✅
+    } else if (angle >= 202.5 && angle < 247.5) {
+        joystick.direction = "Sudoeste"; // ✅
+    } else if (angle >= 247.5 && angle < 292.5) {
+        joystick.direction = "Oeste"; // ✅
+    } else if (angle >= 292.5 && angle < 337.5) {
+        joystick.direction = "Noroeste"; // ✅
     } else {
         joystick.direction = "Indefinido";
     }
